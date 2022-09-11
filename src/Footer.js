@@ -1,14 +1,12 @@
 import React from 'react'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = ({ length }) => {
 
     const today = new Date()    
 
     return (
         <footer>
-            <p>Copyright &copy; {today.getFullYear()}</p>
+            <p>{ length } {length == 1 ? 'item' : 'items'} in sale</p>
         </footer>
     )
 }
