@@ -6,11 +6,10 @@ import AddItem from './AddItem'
 import {  useState, useEffect } from 'react'
 
 function App() {
-
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')) || []);
-
-  const [newItem, setNewItem] = useState('')
+  const API_URL = 'http://localhost:3500/items'
   
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppingList')) || []);
+  const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
 
   useEffect( () => {
